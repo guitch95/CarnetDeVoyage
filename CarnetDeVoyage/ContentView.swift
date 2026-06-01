@@ -13,10 +13,9 @@ struct ContentView: View {
             Color.blue.opacity(0.6)
                 .ignoresSafeArea()
             VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
+                Text("Mon carnet de voyage")
+                    .font(.title)
+                Spacer()
             }
             .padding()
         }
