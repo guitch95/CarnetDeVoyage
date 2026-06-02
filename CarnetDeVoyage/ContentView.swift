@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+
     var body: some View {
         ZStack {
             Color.blue.opacity(0.8)
