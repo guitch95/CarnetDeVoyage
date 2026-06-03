@@ -8,40 +8,7 @@
 import SwiftUI
 
 struct CarteDeLieu: View {
-    var arrOfDestinations: [Destination] = [
-        Destination(
-            city: "Lisbonne",
-            country: "Portugal",
-            background: .red,
-            image: "sun.max.fill",
-            rating: 4,
-            visited: true,
-            startingColor: .orange,
-            endingColor: .red
-        ),
-        Destination(
-            city: "Tokyo",
-            country: "Japon",
-            background: .green,
-            image: "leaf.fill",
-            rating: 5,
-            visited: false,
-            startingColor: .green,
-            endingColor: .teal
-        ),
-        Destination(
-            city: "Oslo",
-            country: "Norway",
-            background: .blue,
-            image: "snowflake",
-            rating: 4,
-            visited: false,
-            startingColor: .blue,
-            endingColor: .blue.opacity(0.2)
-
-        ),
-
-    ]
+    @State private var vm = DestinationViewModel()
     var body: some View {
         ScrollView {
             VStack(spacing: 40) {
@@ -50,22 +17,17 @@ struct CarteDeLieu: View {
                 )
                 .foregroundStyle(.gray)
                 .font(.title3)
-
-                ForEach(arrOfDestinations) { destination in
+                ForEach(vm.arrOfDestinations) { destination in
                     CardDestination(
-                        city: destination.city,
-                        country: destination.country,
-                        bgColor: destination.background,
-                        rating: destination.rating,
-                        symbol: destination.image,
-                        visited: destination.visited,
-                        startingColor: destination.startingColor,
-                        endingColor: destination.endingColor
+                        destination: destination
                     )
+
                 }
             }
             .padding()
         }
+        .scrollIndicators(.hidden)
+        .environment(vm)
     }
 }
 
