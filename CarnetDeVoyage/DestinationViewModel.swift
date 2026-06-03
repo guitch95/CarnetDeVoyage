@@ -18,7 +18,9 @@ class DestinationViewModel {
             rating: 4,
             visited: true,
             startingColor: .orange,
-            endingColor: .red
+            endingColor: .red,
+            imageBanner: .lisbon,
+            description: "Lisbonne est la capitale du Portugal."
         ),
         Destination(
             city: "Tokyo",
@@ -27,7 +29,9 @@ class DestinationViewModel {
             rating: 5,
             visited: false,
             startingColor: .green,
-            endingColor: .teal
+            endingColor: .teal,
+            imageBanner: .tokyo,
+            description: "Tokyo est la capitale du Japon."
         ),
         Destination(
             city: "Oslo",
@@ -36,7 +40,9 @@ class DestinationViewModel {
             rating: 4,
             visited: false,
             startingColor: .blue,
-            endingColor: .blue.opacity(0.2)
+            endingColor: .blue.opacity(0.2),
+            imageBanner: .oslo,
+            description: "Oslo est la capitale de la Norvège."
             
         ),
         Destination(
@@ -46,7 +52,9 @@ class DestinationViewModel {
             rating: 4,
             visited: false,
             startingColor: .yellow,
-            endingColor: .yellow.opacity(0.4)
+            endingColor: .yellow.opacity(0.4),
+            imageBanner: .lima,
+            description: "Lima est la capitale du Pérou."
             
         ),
         Destination(
@@ -56,7 +64,9 @@ class DestinationViewModel {
             rating: 4,
             visited: false,
             startingColor: .purple,
-            endingColor: .purple.opacity(0.4)
+            endingColor: .purple.opacity(0.4),
+            imageBanner: .london,
+            description: "Londres est la capitale de l'Angleterre."
             
         ),
         Destination(
@@ -66,7 +76,9 @@ class DestinationViewModel {
             rating: 4,
             visited: false,
             startingColor: .red,
-            endingColor: .red.opacity(0.4)
+            endingColor: .red.opacity(0.4),
+            imageBanner: .okinawa,
+            description: "Okinawa est un archipel du Japon."
             
         ),
         Destination(
@@ -76,7 +88,9 @@ class DestinationViewModel {
             rating: 4,
             visited: false,
             startingColor: .orange,
-            endingColor: .orange.opacity(0.4)
+            endingColor: .orange.opacity(0.4),
+            imageBanner: .tahiti,
+            description: "Papeete est la capitale de l'île de Tahiti."
             
         ),
         Destination(
@@ -86,7 +100,9 @@ class DestinationViewModel {
             rating: 4,
             visited: false,
             startingColor: .teal,
-            endingColor: .purple.opacity(0.4)
+            endingColor: .purple.opacity(0.4),
+            imageBanner: .budapest,
+            description: "Budapest est la capitale de la Hongrie."
             
         ),
         

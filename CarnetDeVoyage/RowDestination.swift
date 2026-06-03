@@ -46,7 +46,9 @@ struct RowDestination: View {
             rating: 4,
             visited: true,
             startingColor: .red,
-            endingColor: .orange
+            endingColor: .orange,
+            imageBanner: .lisbon,
+            description: ""
         )
     )
 }

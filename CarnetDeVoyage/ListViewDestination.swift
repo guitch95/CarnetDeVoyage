@@ -10,20 +10,30 @@ import SwiftUI
 struct ListViewDestination: View {
     @State private var vm = DestinationViewModel()
     var body: some View {
-        VStack {
-            List {
-                ForEach(vm.arrOfDestinations) { destination in
-                    RowDestination(
-                        destination : destination
-                    )
-
+        NavigationStack {
+            VStack {
+                List {
+                    ForEach(vm.arrOfDestinations) { destination in
+                        NavigationLink(value: destination) {
+                            RowDestination(
+                                destination: destination
+                            )
+                        }
+                    }
+                    .onDelete { index in
+                        vm.arrOfDestinations.remove(atOffsets: index)
+                    }
                 }
-                .onDelete { index in
-                    vm.arrOfDestinations.remove(atOffsets: index)
+                .navigationDestination(for: Destination.self) { destination in
+                    DetailsDestination(destination: destination)
                 }
 
             }
+            .navigationTitle("Voyages")
 
+            .toolbar {
+                EditButton()
+            }
         }
 
     }

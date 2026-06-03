@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Destination: Identifiable {
+struct Destination: Identifiable, Hashable {
     var id = UUID()
     var city: String
     var country: String
@@ -17,5 +17,7 @@ struct Destination: Identifiable {
     var visited : Bool
     var startingColor: Color
     var endingColor : Color
+    var imageBanner: ImageResource
+    var description: String
 }
 
